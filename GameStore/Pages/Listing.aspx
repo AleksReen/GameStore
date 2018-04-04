@@ -9,8 +9,12 @@
 <body>
     <form id="gameForm" runat="server">
         <div>
-            <asp:Label ID="gamesLable" runat="server" />            
+            <asp:Label ID="gamesTable" runat="server" />            
+        </div>
+        <div>
+            <asp:Label ID="gamePages" runat="server" />
         </div>
     </form>
 </body>
 </html>
+
