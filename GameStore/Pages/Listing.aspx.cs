@@ -3,6 +3,7 @@ using GameStore.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.Routing;
 using System.Web.UI.WebControls;
 
 namespace GameStore.Pages
@@ -16,8 +17,17 @@ namespace GameStore.Pages
         {
             get {
                     int page;
-                    return int.TryParse(Request.QueryString["page"], out page) ? page : 1;
+                    page = GetPageFromRequest();
+                    return page > MaxPage ? MaxPage : page;
                 }
+        }
+
+        private int GetPageFromRequest()
+        {
+            int page;
+            string reqValue = (string)RouteData.Values["page"] ?? 
+                Request.QueryString["page"];
+            return reqValue != null && int.TryParse(reqValue, out page) ? page : 1;
         }
 
         protected int MaxPage
@@ -30,7 +40,10 @@ namespace GameStore.Pages
 
         protected void GetGames()
         {
-            var games = gameStoreDataService.GetGames().OrderBy(g => g.GameId).Skip((CurrentPage - 1) * pageSize).Take(pageSize);
+            var games = gameStoreDataService.GetGames()
+                .OrderBy(g => g.GameId)
+                .Skip((CurrentPage - 1) * pageSize)
+                .Take(pageSize);
 
             foreach (var game in games)
             {
@@ -43,8 +56,11 @@ namespace GameStore.Pages
         {
             for (int i = 1; i <= MaxPage; i++)
             {
+                string path = RouteTable.Routes.GetVirtualPath(null, null, new RouteValueDictionary() { { "page", i } }).VirtualPath;
+
                 var link = new HyperLink();
-                link.NavigateUrl = $"/Pages/Listing.aspx?page={i}";
+
+                link.NavigateUrl = path;                
                 link.Text = i.ToString();
 
                 if (i == CurrentPage)
