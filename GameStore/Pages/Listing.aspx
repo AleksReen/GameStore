@@ -1,20 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listing.aspx.cs" Inherits="GameStore.Pages.Listing" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listing.aspx.cs" Inherits="GameStore.Pages.Listing" MasterPageFile="~/Store.Master" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>GameStore</title>
-</head>
-<body>
-    <form id="gameForm" runat="server">
-        <div>
+<asp:Content ContentPlaceHolderID="bodyContent" runat="server">     
+        <div id="content">
             <asp:Label ID="gamesTable" runat="server" />            
         </div>
-        <div>
+        <div class="pager">
             <asp:Label ID="gamePages" runat="server" />
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+   
+
 
