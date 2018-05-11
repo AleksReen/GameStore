@@ -51,6 +51,29 @@ div.item {
         margin: .4em 0 0 0;
     }
 
+a.item {
+    background-color:gray;
+    color:white!important;
+    border-top: 1px dotted gray;
+    padding-top: .7em;
+    margin-bottom: .7em;
+}
+
+    a.item:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    a.item h3 {
+        font-size: 1.3em;
+        margin: 0 0 .25em 0;
+    }
+
+    a.item h4 {
+        font-size: 1.1em;
+        margin: .4em 0 0 0;
+    }
+
 div.pager {
     text-align: right;
     border-top: 2px solid silver;
