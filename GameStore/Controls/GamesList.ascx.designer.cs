@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GameStore.Pages {
+namespace GameStore.Controls.tools {
     
     
-    public partial class Listing {
+    public partial class GamesList {
         
         /// <summary>
-        /// GamesList control.
+        /// Repeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GameStore.Controls.tools.GamesList GamesList;
-        
-        /// <summary>
-        /// gamePages control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label gamePages;
+        protected global::System.Web.UI.WebControls.Repeater Repeater;
     }
 }

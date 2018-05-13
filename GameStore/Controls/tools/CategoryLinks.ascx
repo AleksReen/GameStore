@@ -1,12 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CategoryLinks.ascx.cs" Inherits="GameStore.Controls.tools.CategoryLinks" %>
 
-<asp:Repeater ID="Repeater" runat="server">
+<asp:Repeater ItemType="HyperLink" ID="Repeater" runat="server">
     <ItemTemplate>
         <div>
             <asp:HyperLink
-               Text='<%# Eval("Text") %>'
-               NavigateUrl='<%# Eval("NavigateUrl") %>' 
-               CssClass='<%# Eval("CssClass") %>' 
+               Text='<%# Item.Text %>'
+               NavigateUrl='<%# Item.NavigateUrl %>' 
+               CssClass='<%# Item.CssClass %>' 
                runat="server" />
         </div>
     </ItemTemplate>

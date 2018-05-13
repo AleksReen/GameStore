@@ -40,16 +40,10 @@ namespace GameStore.Pages
 
         protected void GetGames()
         {
-            var games = FilterGames()
+            GamesList.GameCollection = FilterGames()
                 .OrderBy(g => g.GameId)
                 .Skip((CurrentPage - 1) * pageSize)
                 .Take(pageSize);
-
-            foreach (var game in games)
-            {
-                gamesTable.Text += $"<h3>{ game.Name}</h3>{game.Description}<h4>{game.Price:c}</h4>";
-            }
-            gamesTable.CssClass = "item";
         }
 
         private IEnumerable<Game> FilterGames()

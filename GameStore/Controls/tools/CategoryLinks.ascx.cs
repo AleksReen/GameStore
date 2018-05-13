@@ -25,8 +25,6 @@ namespace GameStore.Controls.tools
                 new RouteValueDictionary() { { "category", categoryName },
                     {"page", "1"} }).VirtualPath;
 
-                //category == selectedCategory ? "class='selected'" : "", category
-
                 LinksCollection.Add(new HyperLink {
                     NavigateUrl = path,
                     Text = categoryName,

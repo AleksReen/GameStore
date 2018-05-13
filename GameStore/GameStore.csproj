@@ -76,6 +76,7 @@
     <Content Include="Content\Styles.css" />
     <Content Include="Controls\CategoryList.ascx" />
     <Content Include="Controls\tools\CategoryLinks.ascx" />
+    <Content Include="Controls\GamesList.ascx" />
     <Content Include="Store.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -112,9 +113,18 @@
     <Compile Include="Controls\tools\CategoryLinks.ascx.designer.cs">
       <DependentUpon>CategoryLinks.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\GamesList.ascx.cs">
+      <DependentUpon>GamesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\GamesList.ascx.designer.cs">
+      <DependentUpon>GamesList.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartLine.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Repository\EFDbContext.cs" />
     <Compile Include="Pages\Listing.aspx.cs">
