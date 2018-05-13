@@ -1,5 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="GameStore.Store" %>
 
+<%@ Register Src="~/Controls/CategoryList.ascx" TagPrefix="uc1" TagName="CategoryList" %>
+
+
 <!DOCTYPE html>
 
 <html>
@@ -14,7 +17,7 @@
                 <div class="title">GameStore - магазин компьютерных игр</div>
             </div>
             <div id="categories">
-                Мы добавим сюда контент позже
+                <uc1:CategoryList runat="server" id="CategoryList" />
             </div>
             <div>
                 <asp:ContentPlaceHolder ID="bodyContent" runat="server"></asp:ContentPlaceHolder>

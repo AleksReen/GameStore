@@ -22,5 +22,14 @@ namespace GameStore.Service
 
         [WebMethod]
         public IEnumerable<Game> GetGames() => context.Games;
+
+        [WebMethod]
+        public IEnumerable<string> GetGamesName()
+        {
+            return context.Games
+                .Select(g => g.Category)
+                .Distinct()
+                .OrderBy(g => g);
+        }
     }
 }

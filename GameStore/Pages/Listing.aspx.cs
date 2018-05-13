@@ -40,7 +40,7 @@ namespace GameStore.Pages
 
         protected void GetGames()
         {
-            var games = gameStoreDataService.GetGames()
+            var games = FilterGames()
                 .OrderBy(g => g.GameId)
                 .Skip((CurrentPage - 1) * pageSize)
                 .Take(pageSize);
@@ -51,6 +51,16 @@ namespace GameStore.Pages
             }
             gamesTable.CssClass = "item";
         }
+
+        private IEnumerable<Game> FilterGames()
+        {
+            IEnumerable<Game> games = gameStoreDataService.GetGames();
+            string currentCategory = (string)RouteData.Values["category"] ??
+                Request.QueryString["category"];
+            return currentCategory == null ? games :
+                games.Where(p => p.Category == currentCategory);
+        }
+
 
         protected void GetPages()
         {
