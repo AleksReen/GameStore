@@ -7,45 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GameStore {
+namespace GameStore.Controls {
     
     
-    public partial class Store {
+    public partial class CartSummary {
         
         /// <summary>
-        /// form1 control.
+        /// csQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl csQuantity;
         
         /// <summary>
-        /// CartSummary control.
+        /// csTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GameStore.Controls.CartSummary CartSummary;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl csTotal;
         
         /// <summary>
-        /// CategoryList control.
+        /// csLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GameStore.Controls.CategoryList CategoryList;
-        
-        /// <summary>
-        /// bodyContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder bodyContent;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor csLink;
     }
 }

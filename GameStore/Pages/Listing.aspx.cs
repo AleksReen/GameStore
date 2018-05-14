@@ -1,4 +1,5 @@
 ﻿using GameStore.Models;
+using GameStore.Models.Helpers;
 using GameStore.Service;
 using System;
 using System.Collections.Generic;
@@ -86,6 +87,24 @@ namespace GameStore.Pages
             {
                 GetGames();
                 GetPages();
+            }
+            else
+            {
+                int selectedGameId;
+                if (int.TryParse(Request.Form["add"], out selectedGameId))
+                {
+                    Game selectedGame = gameStoreDataService.GetSelectedGame(selectedGameId);
+                       
+                    if (selectedGame != null)
+                    {
+                        SessionHelper.GetCart(Session).AddItem(selectedGame, 1);
+                        SessionHelper.Set(Session, SessionKey.RETURN_URL,
+                            Request.RawUrl);
+
+                        Response.Redirect(RouteTable.Routes
+                            .GetVirtualPath(null, "cart", null).VirtualPath);
+                    }
+                }
             }
         }
     }
