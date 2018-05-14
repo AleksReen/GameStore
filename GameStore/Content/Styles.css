@@ -13,10 +13,10 @@ div#header {
     color: white;
 }
 
-    div#header div.title {
-        font-size: 2em;
-        padding: .6em;
-    }
+div#header div.title {
+    font-size: 2em;
+    padding: .6em;
+}
 
 div#content {
     border-left: 2px solid gray;
@@ -36,20 +36,20 @@ div.item {
     margin-bottom: .7em;
 }
 
-    div.item:first-child {
-        border-top: none;
-        padding-top: 0;
-    }
+div.item:first-child {
+    border-top: none;
+    padding-top: 0;
+}
 
-    div.item h3 {
-        font-size: 1.3em;
-        margin: 0 0 .25em 0;
-    }
+div.item h3 {
+    font-size: 1.3em;
+    margin: 0 0 .25em 0;
+}
 
-    div.item h4 {
-        font-size: 1.1em;
-        margin: .4em 0 0 0;
-    }
+div.item h4 {
+    font-size: 1.1em;
+    margin: .4em 0 0 0;
+}
 
 a.item {
     background-color:gray;
@@ -59,20 +59,20 @@ a.item {
     margin-bottom: .7em;
 }
 
-    a.item:first-child {
-        border-top: none;
-        padding-top: 0;
-    }
+a.item:first-child {
+    border-top: none;
+    padding-top: 0;
+}
 
-    a.item h3 {
-        font-size: 1.3em;
-        margin: 0 0 .25em 0;
-    }
+a.item h3 {
+    font-size: 1.3em;
+    margin: 0 0 .25em 0;
+}
 
-    a.item h4 {
-        font-size: 1.1em;
-        margin: .4em 0 0 0;
-    }
+a.item h4 {
+    font-size: 1.1em;
+    margin: .4em 0 0 0;
+}
 
 div.pager {
     text-align: right;
@@ -124,4 +124,77 @@ div.item button {
     background-color: #333;
     border: 1px solid black;
     float: right;
+}
+
+h2 {
+    margin-top: 0.3em
+}
+
+#cartTable {
+    width: 90%;
+}
+
+#cartTable tfoot td {
+    border-top: 1px dotted gray;
+    font-weight: bold;
+}
+
+#cartTable thead th {
+    text-align: right;
+}
+
+#cartTable thead th:first-child {
+    text-align: center;
+}
+
+#cartTable thead th:nth-child(2) {
+    text-align: left;
+}
+
+#cartTable tbody td {
+    text-align: right;
+}
+
+#cartTable tbody td:first-child {
+    text-align: center;
+}
+
+#cartTable tbody td:nth-child(2) {
+    text-align: left;
+}
+
+#cartTable tfoot tr td {
+    text-align: right;
+}
+
+p.actionButtons {
+    text-align: center;
+}
+
+.actionButtons a, button.actionButtons {
+    font: .8em Arial;
+    color: White;
+    margin: .5em;
+    text-decoration: none;
+    padding: .15em 1.5em .2em 1.5em;
+    background-color: #353535;
+    border: 1px solid black;
+}
+
+div#cartSummary {
+    float: right;
+    margin: .8em;
+    color: Silver;
+    background-color: #555;
+    padding: .5em .5em .5em 1em;
+}
+
+div#cartSummary a {
+    text-decoration: none;
+    padding: .4em 1em .4em 1em;
+    line-height: 2.1em;
+    margin-left: .5em;
+    background-color: #333;
+    color: White;
+    border: 1px solid black;
 }

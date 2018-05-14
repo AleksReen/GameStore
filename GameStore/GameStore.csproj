@@ -74,9 +74,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Content\Styles.css" />
+    <Content Include="Controls\CartSummary.ascx" />
     <Content Include="Controls\CategoryList.ascx" />
     <Content Include="Controls\tools\CategoryLinks.ascx" />
     <Content Include="Controls\GamesList.ascx" />
+    <Content Include="Pages\CartView.aspx" />
     <Content Include="Store.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -99,6 +101,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controls\CartSummary.ascx.cs">
+      <DependentUpon>CartSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CartSummary.ascx.designer.cs">
+      <DependentUpon>CartSummary.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CategoryList.ascx.cs">
       <DependentUpon>CategoryList.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,7 +135,16 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartLine.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Helpers\SessionKey.cs" />
     <Compile Include="Models\Repository\EFDbContext.cs" />
+    <Compile Include="Models\Helpers\SessionHelper.cs" />
+    <Compile Include="Pages\CartView.aspx.cs">
+      <DependentUpon>CartView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CartView.aspx.designer.cs">
+      <DependentUpon>CartView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Listing.aspx.cs">
       <DependentUpon>Listing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

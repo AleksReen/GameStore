@@ -31,5 +31,13 @@ namespace GameStore.Service
                 .Distinct()
                 .OrderBy(g => g);
         }
+
+        [WebMethod]
+        public Game GetSelectedGame(int selectedGameId)
+        {
+            return context.Games
+                .Where(g => g.GameId == selectedGameId)
+                .FirstOrDefault();
+        }
     }
 }

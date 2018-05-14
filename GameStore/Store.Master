@@ -1,6 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="GameStore.Store" %>
 
 <%@ Register Src="~/Controls/CategoryList.ascx" TagPrefix="uc1" TagName="CategoryList" %>
+<%@ Register Src="~/Controls/CartSummary.ascx" TagPrefix="uc1" TagName="CartSummary" %>
+
 
 
 <!DOCTYPE html>
@@ -14,6 +16,7 @@
     <form id="form1" runat="server">
         <div>
             <div id="header">
+                <uc1:CartSummary runat="server" id="CartSummary" />
                 <div class="title">GameStore - магазин компьютерных игр</div>
             </div>
             <div id="categories">
