@@ -3,10 +3,7 @@ using GameStore.Models.Helpers;
 using GameStore.Service;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Web.Routing;
 
 namespace GameStore.Pages
 {
@@ -47,6 +44,15 @@ namespace GameStore.Pages
             get
             {
                 return SessionHelper.Get<string>(Session, SessionKey.RETURN_URL);
+            }
+        }
+
+        public string CheckoutUrl
+        {
+            get
+            {
+                return RouteTable.Routes.GetVirtualPath(null, "checkout",
+                    null).VirtualPath;
             }
         }
     }

@@ -79,6 +79,7 @@
     <Content Include="Controls\tools\CategoryLinks.ascx" />
     <Content Include="Controls\GamesList.ascx" />
     <Content Include="Pages\CartView.aspx" />
+    <Content Include="Pages\Checkout.aspx" />
     <Content Include="Store.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -136,6 +137,8 @@
     <Compile Include="Models\CartLine.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Helpers\SessionKey.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderLine.cs" />
     <Compile Include="Models\Repository\EFDbContext.cs" />
     <Compile Include="Models\Helpers\SessionHelper.cs" />
     <Compile Include="Pages\CartView.aspx.cs">
@@ -144,6 +147,13 @@
     </Compile>
     <Compile Include="Pages\CartView.aspx.designer.cs">
       <DependentUpon>CartView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Listing.aspx.cs">
       <DependentUpon>Listing.aspx</DependentUpon>

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using GameStore.Models.Repository;
+using System;
+using System.Data.Entity;
 using System.Web.Routing;
-using System.Web.Security;
-using System.Web.SessionState;
 
 namespace GameStore
 {
@@ -13,6 +10,7 @@ namespace GameStore
         protected void Application_Start(object sender, EventArgs e)
         {
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Database.SetInitializer<EFDbContext>(null);
         }
     }
 }
